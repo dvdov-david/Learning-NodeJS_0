@@ -35,7 +35,7 @@ export const createEmployees = async (req,res) => {
     //y aqui se rescata del cuerpo del mensaje
     //Aqui s epodrian hacer validaciones//
     try {
-     const [rows] = await pool.query('INSERT INTO empoyee(name,salary) VALUES(?,?)',[name,salary])
+     const [rows] = await pool.query('INSERT INTO employee(name,salary) VALUES(?,?)',[name,salary])
     res.send({
         id: rows.insertId,
         name,
